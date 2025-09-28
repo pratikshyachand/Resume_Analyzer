@@ -6,7 +6,7 @@ STOPWORDS = {
     "this","as","by","from","be","it","at","have","has","will","can","we","you"
 }
 
-#read job description from user pasted text
+#reads job description from user pasted text
 def read_job_description(prompt="Paste the job description and write EOF on a new line when done:"):
     print(prompt)
     lines = []
@@ -59,25 +59,28 @@ def compare(job_text, resume_text):
         score = round(len(match) / len(job_set) * 100, 2)
 
     result = {
-        "score":score
-        # "missing": 
-        # "matched":
-
-
+        "score": score,
+        "missing": missing
     }
-
-
     return result
 
 
-    
-
 def main():
           job_text = read_job_description()
-          resume_text = read_resume()
+          try:
+           resume_text = read_resume()
+          except Exception:
+              print("File not found")
+              exit() 
+
           result = compare(job_text, resume_text)
 
-          print(f"Score: {result['score']}")
+          print("----------------")
+          print("RESULT ANALYZER")
+          print("----------------")
+          print(f"Match Score: {result['score']}%")
+          print(f"Missing Keywords:")
+          print(",".join(result['missing']) or "None")
 
 
 
