@@ -1,9 +1,5 @@
 # Resume Analyzer
 
-#### Video Demo: <https://www.youtube.com/watch?v=NPM-ZZjZuog>
-
----
-
 ## Description
 
 Resume Analyzer is a Python-based tool that helps job seekers evaluate how well their resume aligns with a specific job description. In today’s competitive job market, it is often not enough to have a well-written resume, but it must also be tailored to the keywords and skills that employers are actively searching for. This project addresses that need by comparing the text of a resume against the text of a job posting, identifying overlaps as well as gaps.
