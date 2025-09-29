@@ -67,11 +67,13 @@ def compare(job_text, resume_text):
 
 def main():
           job_text = read_job_description()
-          try:
-           resume_text = read_resume()
-          except Exception:
-              print("File not found")
-              exit() 
+          while True:
+           try:
+              resume_text = read_resume()
+              break
+           except Exception:
+              print("File not found. Please provide a valid file path.")
+              pass 
 
           result = compare(job_text, resume_text)
 
