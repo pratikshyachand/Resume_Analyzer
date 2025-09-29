@@ -1,4 +1,4 @@
-import PyPDF2
+import pypdf
 import re
 
 STOPWORDS = {
@@ -24,7 +24,7 @@ def read_job_description(prompt="Paste the job description and write EOF on a ne
 def read_resume():
     path = input("Provide path to your resume file: ").strip()
     texts = []
-    reader = PyPDF2.PdfReader(path)
+    reader = pypdf.PdfReader(path)
     for page in reader.pages:
      try:
         text = page.extract_text()
