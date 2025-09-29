@@ -37,6 +37,16 @@ Resume Analyzer currently provides the following features:
 
 ---
 
+## Files in the Project
+
+- `project.py`: The main script containing functions for reading resumes, processing text, and comparing with job descriptions.
+- `requirements.txt`: A list of Python libraries required to run this project.
+- `README.md`: This documentation file.
+---
+## Design Decisions
+I chose PyPDF2 for text extraction because it’s lightweight and easy to use for basic PDF parsing. For tokenization, I used regex with optional stopword removal to ensure that irrelevant words do not affect keyword matching. One debate was whether to use NLP libraries like spaCy or NLTK, but for the beginner version, I stuck with regex for simplicity. However, an advanced version could use NLP for more accurate results.
+
+---
 ## Requirements  
 
 - Python 3.12+  
@@ -77,6 +87,7 @@ source .../bin/activate
 ```bash
 pip install PyPDF2
 ```
+---
 ## Start Guide
 Run the program from the terminal as follows:
 ```bash
