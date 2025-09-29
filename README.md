@@ -76,7 +76,7 @@ cd Resume_Analyzer
 ```bash
 source .../bin/activate
 ```
->assuming you are inside the Resume_Analyzer directory clone in step 4.
+>assuming you are inside the Resume_Analyzer directory cloned in step 4.
 6.Install required library:
 ```bash
 pip install pypdf
